@@ -1,1 +1,1 @@
-# gerencia_notas
+# Projeto de gerenciamento acadêmico com Django 
