@@ -1,0 +1,39 @@
+        {% load static %}
+        <div class="sidebar" id="sidebar-wrapper">
+            <!--<a href="" class="menu-toggle botao"><i class="icon ion-md-close"></i></a> -->
+            <div class="sidebar-heading mt-3 mb-3"><i class="icon ion-ios-cube"></i>Boxes Administrator </div>
+            <span class="sidebar-heading rotulo">Principal</span>
+            <div class="list-group list-group-flush mt-2" id="accordion">
+              
+                <a href="/dashboard" class="list-group-item sidebar-item {% if pagina == '/dashboard' %}active{% endif %}"><i class="icon ion-ios-analytics"></i><span>Dashboard</span></a>
+              
+                <a class="list-group-item dropdown-toggle sidebar-item {% if pagina == '/alunos/' %}active{% endif %}" data-toggle="collapse" href="" data-target="#collapseExample" role="button" aria-expanded="true" aria-controls="collapseExample">
+                    <i class="icon ion-ios-people"></i>Alunos <i class="icon ion-md-arrow"></i>
+                </a>
+                
+                <div class="collapse" id="collapseExample">
+                    <a href="/alunos/novo" class="list-group-item subitem {% if pagina == '/clientes/ativo' %}active{% endif %}">Novo</a>    
+                    <a href="/alunos/aprovados" class="list-group-item subitem {% if pagina == '/clientes/excluidos' %}active{% endif %}">Aprovados</a>   
+                    <a href="/alunos/recuperacao" class="list-group-item subitem {% if pagina == '/clientes/novos' %}active{% endif %}">Em Recuperação</a>   
+                    <a href="/alunos/reprovados" class="list-group-item subitem {% if pagina == '/clientes/novos' %}active{% endif %}">Reprovados</a>
+                    <a href="/alunos/todos" class="list-group-item subitem {% if pagina == '/alunos/' %}active{% endif %}">Listar Todos</a>
+                </div>
+                <a class="list-group-item dropdown-toggle sidebar-item {% if pagina == '/alunos/' %}active{% endif %}" data-toggle="collapse" href="" data-target="#diciplinas-options" role="button" aria-expanded="true" aria-controls="diciplinas-options">
+                    <i class="icon ion-md-bookmarks"></i>Diciplinas <i class="icon ion-md-arrow"></i>
+                </a>
+                
+                <div class="collapse" id="diciplinas-options">
+                    <a href="/alunos/todos" class="list-group-item subitem"><i class="icon ion-ios-list"></i>Pontuaçoes</a>
+                    <a href="/alunos/novo" class="list-group-item subitem"><i class="icon ion-ios-bookmark"></i>Nova Diciplina</a>                  
+                </div>
+                <a href="#" class="list-group-item sidebar-item"><i class="icon ion-ios-document"></i>Páginas</a>
+
+                <span class="sidebar-heading rotulo">Sistema</span>
+                <a href="#" class="list-group-item sidebar-item">Usuários</a>
+                <a href="#" class="list-group-item sidebar-item">Alterar Senha</a>
+                <a href="/logout" class="list-group-item sidebar-item">Sair</a>
+              </div>
+
+              
+          </div>
+      </div>
